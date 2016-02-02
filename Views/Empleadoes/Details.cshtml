@@ -1,0 +1,50 @@
+﻿@model MiprimerMVC.Models.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passwordEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passwordEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonoEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonoEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccionEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionEmpleado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoEmpleado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

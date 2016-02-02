@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MiprimerMVC.Models.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passwordEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefonoEmpleado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccionEmpleado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passwordEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefonoEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionEmpleado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigoEmpleado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigoEmpleado }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigoEmpleado })
+        </td>
+    </tr>
+}
+
+</table>
